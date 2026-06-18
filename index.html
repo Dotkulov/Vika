@@ -18,17 +18,17 @@
             justify-content: center;
             align-items: center;
             font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
-            padding: 20px;
+            padding: 16px;
         }
 
         .card {
-            max-width: 600px;
+            max-width: 520px;
             width: 100%;
             background: rgba(255, 248, 242, 0.85);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border-radius: 40px;
-            padding: 40px 35px;
+            border-radius: 32px;
+            padding: 30px 28px;
             box-shadow: 
                 0 20px 60px rgba(160, 120, 90, 0.20),
                 0 8px 24px rgba(0, 0, 0, 0.04),
@@ -44,15 +44,15 @@
         }
 
         .message {
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 17px;
+            line-height: 1.6;
             color: #3d2e24;
             white-space: pre-wrap;
             word-wrap: break-word;
         }
 
         .message .greeting {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 500;
             color: #8b5e4a;
         }
@@ -62,30 +62,24 @@
             font-weight: 500;
         }
 
-        .message .emoji-big {
-            font-size: 24px;
-            display: inline-block;
-        }
-
         .message .signature {
-            margin-top: 20px;
-            padding-top: 18px;
+            margin-top: 14px;
+            padding-top: 14px;
             border-top: 2px dashed #e6d3c4;
-            font-size: 17px;
+            font-size: 16px;
             color: #7a5f4f;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .message .signature .smile {
-            font-size: 26px;
+            font-size: 22px;
             letter-spacing: 2px;
         }
 
-      
         .heart-pulse {
             display: inline-block;
             animation: pulse 1.8s ease-in-out infinite;
@@ -96,22 +90,22 @@
             50% { transform: scale(1.15); }
         }
 
-        /* адаптив */
         @media (max-width: 500px) {
             .card {
-                padding: 28px 20px;
-                border-radius: 28px;
+                padding: 22px 18px;
+                border-radius: 24px;
             }
             .message {
-                font-size: 16px;
-                line-height: 1.7;
+                font-size: 15px;
+                line-height: 1.6;
             }
             .message .greeting {
-                font-size: 20px;
+                font-size: 18px;
             }
             .message .signature {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 4px;
             }
         }
     </style>
@@ -122,7 +116,6 @@
         <div class="message">
 
             <span class="greeting">Приветики) </span>
-            <span class="emoji-big"></span>
             <br><br>
             Я правда очень рад, что мы с тобой познакомились.
             Ты <span class="highlight">классная и весёлая</span>, с тобой легко и хорошо.
@@ -138,10 +131,11 @@
             Поступай туда, куда хочешь — и всё будет <span class="highlight">отлично</span>!
             <br><br>
             Спасибо тебе ещё раз.
+
             <div class="signature">
                 <span>Не пропадай, хотя бы иногда пиши :)</span>
                 <span class="smile">
-                    <span class="heart-pulse"></span> 
+                    <span class="heart-pulse"></span>
                 </span>
             </div>
 
