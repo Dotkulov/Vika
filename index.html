@@ -1,12 +1,163 @@
-Приветики)
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Для подруни</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-Я правда очень рад, что мы с тобой познакомились. 
-Ты классная и весёлая, с тобой легко и хорошо. 
-Спасибо тебе за всё, за то, что была рядом, 
-поддерживала, слушала. Это много для меня значит.
-Желаю, чтобы переезд прошёл гладко, 
-и чтобы на новом месте тебя окружали только хорошие люди. 
-И верю, что у тебя получится стать режиссером, поступай 
-туда, куда хочешь, и всё будет отлично. 
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fdf6f0 0%, #f0e6dc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+            padding: 20px;
+        }
 
-Спасибо тебе ещё раз. Не пропадай, хотя бы иногда пиши :)
+        .card {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 248, 242, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 40px;
+            padding: 40px 35px;
+            box-shadow: 
+                0 20px 60px rgba(160, 120, 90, 0.20),
+                0 8px 24px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 235, 220, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 
+                0 28px 72px rgba(160, 120, 90, 0.25),
+                0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #3d2e24;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .message .greeting {
+            font-size: 22px;
+            font-weight: 500;
+            color: #8b5e4a;
+        }
+
+        .message .highlight {
+            color: #b45a3c;
+            font-weight: 500;
+        }
+
+        .message .emoji-big {
+            font-size: 24px;
+            display: inline-block;
+        }
+
+        .message .signature {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 2px dashed #e6d3c4;
+            font-size: 17px;
+            color: #7a5f4f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .message .signature .smile {
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+
+      
+        .heart-pulse {
+            display: inline-block;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* адаптив */
+        @media (max-width: 500px) {
+            .card {
+                padding: 28px 20px;
+                border-radius: 28px;
+            }
+            .message {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+            .message .greeting {
+                font-size: 20px;
+            }
+            .message .signature {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="message">
+
+            <span class="greeting">Приветики) </span>
+            <span class="emoji-big"></span>
+
+            <br><br>
+
+            Я правда очень рад, что мы с тобой познакомились.
+            Ты <span class="highlight">классная и весёлая</span>, с тобой легко и хорошо.
+
+            <br><br>
+
+            Спасибо тебе за всё — за то, что была рядом,
+            поддерживала, слушала.
+            Это <span class="highlight">много для меня</span> значит.
+
+            <br><br>
+
+            Желаю, чтобы переезд прошёл гладко,
+            и чтобы на новом месте тебя окружали <span class="highlight">только хорошие люди</span>.
+
+            <br><br>
+
+            И верю, что у тебя получится стать режиссёром.
+            Поступай туда, куда хочешь — и всё будет <span class="highlight">отлично</span>!
+
+            <br><br>
+
+            Спасибо тебе ещё раз.
+
+            <div class="signature">
+                <span>Не пропадай, хотя бы иногда пиши :)</span>
+                <span class="smile">
+                    <span class="heart-pulse"></span> 
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
